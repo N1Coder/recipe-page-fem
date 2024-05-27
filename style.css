@@ -11,7 +11,6 @@
 
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900
-
 .outfit-<uniquifier > {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
@@ -116,6 +115,7 @@ hr {
 }
 
 .section-instructions li {
+  font-weight: bold;
   color: var(--primary-nutmeg);
   padding-left: 1.25rem;
   margin-left: 1.5rem;
@@ -124,8 +124,73 @@ hr {
 
 .section-instructions li b {
   color: var(--wenge-brown);
+  font-weight: 600;
 }
 
 .section-instructions li p {
-  display: inline-block;
+  display: inline;
+  font-weight: normal;
+}
+
+.section-nutrition p {
+  color: var(--wenge-brown);
+  margin-bottom: 1.5rem;
+}
+
+.section-nutrition li {
+  display: grid;
+  padding-block: 0.75rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.section-nutrition li:not(:last-child) {
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.section-nutrition li p {
+  margin: 0;
+  margin-left: 2rem;
+}
+
+.section-nutrition li p:last-child {
+  font-weight: bold;
+  color: var(--primary-nutmeg);
+}
+
+@media (max-width: 576px) {
+  main {
+    max-width: auto;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  img {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-top: 0 !important;
+  }
+
+  header,
+  section {
+    padding: 2rem;
+  }
+
+  .section-preparation-time {
+    padding: 1.75rem;
+    margin-bottom: 0;
+    margin-inline: 2rem;
+  }
+
+  .section-preparation-time h2 {
+    font-size: 1.25rem;
+  }
+
+  hr {
+    margin-block: 0;
+    margin-inline: 2rem;
+  }
 }
